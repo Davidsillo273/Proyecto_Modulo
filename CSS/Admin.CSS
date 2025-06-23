@@ -1,0 +1,217 @@
+ * {
+    font-family: "Montserrat", sans-serif;
+ }
+ body {
+     background-color: #3a3a3a;
+     color: white;
+     padding: 20px;
+ }
+
+ /*Área Responsive*/
+ .container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.table-container {
+  background-color: white;
+  border-radius: 5px;
+  overflow-x: auto;
+  width: 100%;
+  border: 3px solid #3D9DF3;
+}
+
+@media (max-width: 600px) {
+  .search-box {
+    width: 100%;
+  }
+
+  .top-bar {
+    flex-direction: column;
+  }
+
+  button, .search-btn {
+    width: 100%;
+  }
+}
+
+
+ h1 {
+     margin-bottom: 20px;
+ }
+
+ .top-bar {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     margin-bottom: 30px;
+ }
+
+ button {
+     border: none;
+     padding: 10px 20px;
+     color: white;
+     font-weight: bold;
+     border-radius: 5px;
+     cursor: pointer;
+     justify-content: space-around;
+     
+ }
+
+ .add-btn {
+     background-color: #6b321d;
+
+
+     color: white;
+
+     border: none;
+
+     width: 100px;
+     height: 40px;
+
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+     display: flex;
+
+     justify-content: center;
+
+     align-items: center;
+
+     transition: transform 0.4s;
+     /*Animación que durará 0.4s*/
+
+     z-index: 1001;
+     /*Para que el botón siempre quede encima de todo*/
+
+ }
+
+ .update-btn {
+     background-color: #9d752c;
+
+     color: white;
+
+     border: none;
+
+     width: 100px;
+     height: 40px;
+
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+     display: flex;
+
+     justify-content: center;
+
+     align-items: center;
+
+     z-index: 1001;
+     /*Para que el botón siempre quede encima de todo*/
+
+ }
+
+ .delete-btn {
+     background-color: #702727;
+
+     color: white;
+
+     border: none;
+
+     width: 100px;
+     height: 40px;
+
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+     display: flex;
+
+     justify-content: center;
+
+     align-items: center;
+
+     z-index: 1001;
+     /*Para que el botón siempre quede encima de todo*/
+ }
+
+ .search-box {
+     padding: 10px;
+     border-radius: 5px;
+     border: none;
+     width: 180px;
+
+
+ }
+
+ .search-btn {
+     background-color: #904327;
+
+     color: white;
+
+     border: none;
+
+     width: 100px;
+     height: 40px;
+
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+     display: flex;
+
+     justify-content: center;
+
+     align-items: center;
+
+     z-index: 1001;
+     /*Para que el botón siempre quede encima de todo*/
+
+
+ }
+
+ .table-container {
+     background-color: white;
+     border-radius: 5px;
+     overflow: hidden;
+     max-width: 600px;
+     margin-top: 10px;
+ }
+
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     color: black;
+ }
+
+ th,
+ td {
+     padding: 12px;
+     text-align: left;
+     border: 1px solid #ccc;
+ }
+
+ th {
+     background-color: #f2f2f2;
+     font-weight: bold;
+ }
+
+ .table-container {
+     border: 3px solid #3D9DF3;
+ }
+
+ .profile-icon {
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     background-color: #ccc;
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
+ }
