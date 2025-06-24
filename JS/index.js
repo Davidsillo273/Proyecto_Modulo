@@ -24,7 +24,7 @@ function CargarTarjetas(zapatos){
     zapatos.forEach(zapato => {
         container.innerHTML += `
             <div class="card">
-                <img src="${zapato.imagen}" alt="">
+                <img src="${zapato.imagenes}" alt="">
                 <h2>${zapato.nombre}</h2>
                 <div>
                     <h3>${zapato.categoria}</h3>
