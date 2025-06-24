@@ -86,12 +86,19 @@ main{
     gap: 20px;
 }
 
+.card h2{
+    color: #4C4A4A;
+}
+
+.card h3 h4{
+    color: darkgrey;
+}
+
 .card div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: black;
     gap: 40px;
 }
 
