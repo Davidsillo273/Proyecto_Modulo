@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
 </head>
 
 <body>
@@ -27,9 +28,6 @@
 
         <h1>UShoes - Área de Administrador</h1>
         <div class="top-bar">
-            <button class="add-btn" type="submit"  id="btn-submit" >Agregar</button>
-            <button class="update-btn">Actualizar</button>
-            <button class="delete-btn">Eliminar</button>
             <input type="text" class="search-box" placeholder="Zapatos nike...">
             <button class="search-btn">Buscar</button>
         </div>
@@ -38,7 +36,7 @@
     <main class="container">
  
     <!-- Formulario -->
-    <form id="persona-form" class="persona-form">
+    <form id="persona-form" class="zapato-form">
       <div class="flex">
         <label for="nombre">Nombre:
           <input type="text" id="nombre" required />
@@ -59,6 +57,7 @@
 
       <!-- Guarda el ID de la persona que se está editando (vacío en modo "agregar") -->
       <input type="hidden" id="persona-id" />
+      <button class="add-btn" type="submit"  id="btn-submit" >Agregar</button>
 
       <!-- Botón para cancelar la edición y resetear el formulario -->
       <button type="button" id="btn-cancel" hidden>Cancelar</button>

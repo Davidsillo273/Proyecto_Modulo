@@ -1,0 +1,126 @@
+body{
+    background-color: #4C4A4A;
+}
+
+nav{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(47, 47, 47, 0.5);
+}
+
+nav h1 a{
+    text-decoration: none;
+    color: white;
+    font-size: 60px;
+}
+
+nav div{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.Button{
+    gap: 0px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+}
+
+.Button svg{
+    width: 40px;
+    height: 40px;
+}
+
+.welcome{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/31.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    min-height: 400px;
+    width: 100%;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.Shoes-div{
+    margin-top: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card{
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+    background-color: #D9D9D9;
+    gap: 20px;
+}
+
+.card h2{
+    color: #4C4A4A;
+}
+
+.card h3 h4{
+    color: darkgrey;
+}
+
+.card div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.card button{
+    background-color: #CF9935;
+    border-radius: 80px;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100px;
+}
+
+.card button svg{
+    max-width: 20px;
+    max-height: 20px;
+    background: transparent;
+}
+
+.card img{
+    height: 150px;
+    width: 200px;
+    object-fit: cover;
+}
