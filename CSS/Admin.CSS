@@ -8,6 +8,23 @@
      padding: 20px;
  }
 
+/* Formulario */
+.zapato-form {
+    margin-bottom: 1.5rem;
+  }
+
+.zapato-form .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .zapato-form .flex label {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;
+  }
+
  /*Área Responsive*/
  .container {
      max-width: 800px;
