@@ -13,15 +13,21 @@
 </head>
 
 <body>
-    <a href="Index.html" class="linkInicio">Ir a Inicio</a>
-    
-    <div> <img src="IMG/usuario.png" alt="profile-icon"></div>
+    <header class="container">
+        <nav>
+            <ul>
+                <a href="Index.html" class="linkInicio">Ir a Inicio</a>
+
+                <div> <img src="IMG/usuario.png" alt="profile-icon"></div>
+            </ul>
+        </nav>
+    </header>
 
     <div class="container">
 
         <h1>UShoes - Área de Administrador</h1>
         <div class="top-bar">
-            <button class="add-btn">Agregar</button>
+            <button class="add-btn" type="submit"  id="btn-submit" >Agregar</button>
             <button class="update-btn">Actualizar</button>
             <button class="delete-btn">Eliminar</button>
             <input type="text" class="search-box" placeholder="Zapatos nike...">
@@ -29,6 +35,57 @@
         </div>
     </div>
 
+    <main class="container">
+ 
+    <!-- Formulario -->
+    <form id="persona-form" class="persona-form">
+      <div class="flex">
+        <label for="nombre">Nombre:
+          <input type="text" id="nombre" required />
+        </label>
+        <label for="precio">Precio:
+          <input type="number" id="precio" required />
+        </label>
+        <label for="categoria">Categoría:
+            <input type="text" id="categoria" required /> 
+        </label>
+        <label for="imagen-file">Imagen:
+          <input type="file" id="imagen-file" accept="image/*"  class="search-img"/>
+        </label>
+      </div>
+
+      <!-- Guarda la URL de la imagen cuando se edita un registro (para no subirla de nuevo si no cambia) -->
+      <input type="hidden" id="imagen-url" />
+
+      <!-- Guarda el ID de la persona que se está editando (vacío en modo "agregar") -->
+      <input type="hidden" id="persona-id" />
+
+      <!-- Botón para cancelar la edición y resetear el formulario -->
+      <button type="button" id="btn-cancel" hidden>Cancelar</button>
+
+    </form>
+
+           <h1>Tabla de Productos</h1>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                    <th>Imagen</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+    </main>
+
+    <script src="JS/Admin.JS"></script>
 </body>
 
 </html>
