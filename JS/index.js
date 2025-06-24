@@ -38,5 +38,19 @@ function CargarTarjetas(zapatos){
     });
 }
 
+const btnSubir = document.getElementById('btnSubir');
+
+window.addEventListener('scroll', () => {
+  btnSubir.style.display = window.scrollY > 300 ? 'flex' : 'none';
+});
+
+btnSubir.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+
 //Al cargar la pagina:
 window.addEventListener('DOMContentLoaded', CargarCatalogos);

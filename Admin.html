@@ -19,7 +19,7 @@
             <ul>
                 <a href="Index.html" class="linkInicio">Ir a Inicio</a>
 
-                <div> <img src="IMG/usuario.png" alt="profile-icon"></div>
+                <div class="img-profile"> <img src="IMG/usuario.png" alt="profile-icon"></div>
             </ul>
         </nav>
     </header>
@@ -34,57 +34,73 @@
     </div>
 
     <main class="container">
- 
-    <!-- Formulario -->
-    <form id="persona-form" class="zapato-form">
-      <div class="flex">
-        <label for="nombre">Nombre:
-          <input type="text" id="nombre" required />
-        </label>
-        <label for="precio">Precio:
-          <input type="number" id="precio" required />
-        </label>
-        <label for="categoria">Categoría:
-            <input type="text" id="categoria" required /> 
-        </label>
-        <label for="imagen-file">Imagen:
-          <input type="file" id="imagen-file" accept="image/*"  class="search-img"/>
-        </label>
-      </div>
 
-      <!-- Guarda la URL de la imagen cuando se edita un registro (para no subirla de nuevo si no cambia) -->
-      <input type="hidden" id="imagen-url" />
+        <!-- Formulario -->
+        <form id="producto-form" class="zapato-form">
+            <div class="flex">
+                <label for="nombre">Nombre:
+                    <input type="text" id="nombre" required />
+                </label>
+                <label for="precio">Precio:
+                    <input type="number" id="precio" required />
+                </label>
+                <label for="categoria">Categoría:
+                    <input type="text" id="categoria" required />
+                </label>
+                <label for="imagen-file">Imagen:
+                    <input type="file" id="imagen-file" accept="image/*" class="search-img" />
+                </label>
+            </div>
 
-      <!-- Guarda el ID de la persona que se está editando (vacío en modo "agregar") -->
-      <input type="hidden" id="persona-id" />
-      <button class="add-btn" type="submit"  id="btn-submit" >Agregar</button>
+            <!-- Guarda la URL de la imagen cuando se edita un registro (para no subirla de nuevo si no cambia) -->
+            <input type="hidden" id="imagen-url" />
 
-      <!-- Botón para cancelar la edición y resetear el formulario -->
-      <button type="button" id="btn-cancel" hidden>Cancelar</button>
+            <!-- Guarda el ID de la persona que se está editando (vacío en modo "agregar") -->
+            <input type="hidden" id="zapato-id" />
+            <button type="submit" id="btn-submit">Agregar</button>
 
-    </form>
+            <!-- Botón para cancelar la edición y resetear el formulario -->
+            <button type="button" id="btn-cancel" hidden>Cancelar</button>
 
-           <h1>Tabla de Productos</h1>
+        </form>
 
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Precio</th>
-                    <th>Categoría</th>
-                    <th>Imagen</th>
+        <h1>Tabla de Productos</h1>
 
-                </tr>
-            </thead>
-            <tbody>
-            
-            </tbody>
-        </table>
-    </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Categoría</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+
+                    </tr>
+                </thead>
+                <tbody id="productos-tbody">
+
+                </tbody>
+            </table>
+        </div>
     </main>
 
+    <!-- Botón flotante para subir al inicio -->
+    <button class="add-button" id="btnSubir" title="Subir al inicio">
+        <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-arrow-up" width="28" height="28"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12l7-7 7 7" />
+            <path d="M12 19V5" />
+        </svg>
+    </button>
+
+    <footer>
+        <p style="text-align: center;">&copy; 2025 Instituto Técnico Ricaldone</p>
+    </footer>
+
     <script src="JS/Admin.JS"></script>
+
 </body>
 
 </html>

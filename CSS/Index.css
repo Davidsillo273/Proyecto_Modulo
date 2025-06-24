@@ -1,5 +1,5 @@
 body{
-    background-color: #4C4A4A;
+    background-color: #111311;
 }
 
 nav{
@@ -11,7 +11,7 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(47, 47, 47, 0.5);
+    background-color: 111311;
 }
 
 nav h1 a{
@@ -82,8 +82,9 @@ main{
     align-items: center;
     flex-direction: column;
     padding: 2%;
-    background-color: #D9D9D9;
+    background-color: #4C4A4A;
     gap: 20px;
+    border-radius: 20px;
 }
 
 .card h2{
@@ -123,4 +124,39 @@ main{
     height: 150px;
     width: 200px;
     object-fit: cover;
+}
+
+
+.add-button{
+    position: fixed; /*El botón queda flotante*/
+
+    bottom: 30px; /*Desde abajo 20px*/
+
+    right: 25px; /*Desde la derecha 20px*/
+
+    background-color: green;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 100%;
+
+    width: 70px;
+    height: 70px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.4s; /*Animación que durará 0.4s*/
+
+    z-index: 1001; /*Para que el botón siempre quede encima de todo*/
+}
+
+.add-button:hover{
+    transform: scale(1.1);
 }
