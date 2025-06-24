@@ -1,52 +1,54 @@
  * {
-    font-family: "Montserrat", sans-serif;
+     font-family: "Montserrat", sans-serif;
  }
+
  body {
-     background-color: #3a3a3a;
+     background-color: #111311;
      color: white;
      padding: 20px;
  }
 
  /*Área Responsive*/
  .container {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+     max-width: 800px;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+ }
 
-.top-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 30px;
-  width: 100%;
-}
+ .top-bar {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 10px;
+     margin-bottom: 30px;
+     width: 100%;
+ }
 
-.table-container {
-  background-color: white;
-  border-radius: 5px;
-  overflow-x: auto;
-  width: 100%;
-  border: 3px solid #3D9DF3;
-}
+ .table-container {
+     background-color: white;
+     border-radius: 5px;
+     overflow-x: auto;
+     width: 100%;
+     border: 3px solid #3D9DF3;
+ }
 
-@media (max-width: 600px) {
-  .search-box {
-    width: 100%;
-  }
+ @media (max-width: 600px) {
+     .search-box {
+         width: 100%;
+     }
 
-  .top-bar {
-    flex-direction: column;
-  }
+     .top-bar {
+         flex-direction: column;
+     }
 
-  button, .search-btn {
-    width: 100%;
-  }
-}
+     button,
+     .search-btn {
+         width: 100%;
+     }
+ }
 
 
  h1 {
@@ -68,7 +70,7 @@
      border-radius: 5px;
      cursor: pointer;
      justify-content: space-around;
-     
+
  }
 
  .add-btn {
@@ -89,9 +91,6 @@
      justify-content: center;
 
      align-items: center;
-
-     transition: transform 0.4s;
-     /*Animación que durará 0.4s*/
 
      z-index: 1001;
      /*Para que el botón siempre quede encima de todo*/
@@ -148,8 +147,6 @@
      border-radius: 5px;
      border: none;
      width: 180px;
-
-
  }
 
  .search-btn {
@@ -173,7 +170,6 @@
      z-index: 1001;
      /*Para que el botón siempre quede encima de todo*/
 
-
  }
 
  .table-container {
@@ -184,34 +180,25 @@
      margin-top: 10px;
  }
 
- table {
-     width: 100%;
-     border-collapse: collapse;
-     color: black;
- }
-
- th,
- td {
-     padding: 12px;
-     text-align: left;
-     border: 1px solid #ccc;
- }
-
- th {
-     background-color: #f2f2f2;
-     font-weight: bold;
- }
-
  .table-container {
      border: 3px solid #3D9DF3;
  }
 
- .profile-icon {
+ img {
      position: absolute;
      top: 20px;
      right: 20px;
      background-color: #ccc;
      border-radius: 50%;
-     width: 40px;
-     height: 40px;
+     width: 50px;
+     height: 50px;
+ }
+
+ .linkInicio {
+     position: absolute;
+     top: 35px;
+     right: 90px;
+     text-decoration: none;
+     color: #EADDFF;
+     font-size: 20px;
  }
