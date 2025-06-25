@@ -13,6 +13,7 @@ const submitBtn = document.getElementById('btn-submit');
 const tbody = document.getElementById('productos-tbody');
 const searchBtn = document.querySelector('.search-btn');
 const searchInput = document.querySelector('.search-box');
+const btnSubir = document.getElementById('btnSubir');
 
 async function CargarProductos() {
   const res = await fetch(API_URL);
@@ -95,25 +96,35 @@ form.addEventListener('submit', async e => {
     imagenes: imageUrl
   };
 
-  if (idEl.value) {
-    await fetch(`${API_URL}/${idEl.value}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    alert("Registro actualizado");
-  } else {
-    await fetch(API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    alert("Registro agregado");
+  if(!nombreEl.value || !precioEl.value || !categoriaEl.value || !imageUrl){
+    alert("Los campos no estan completos");
+    return;
+
+  } else if(precioEl.value <= 0){
+    alert("El precio es incorrecto, no se puede agregar un precio menor a $1");
+    return;
+
+  }else{
+    if (idEl.value) {
+      await fetch(`${API_URL}/${idEl.value}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } else {
+      await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      alert("Registro agregado");
+    }
   }
 
   form.reset();
-  cancelBtn.hidden = true;
+  idEl.value = '';
   submitBtn.textContent = 'Agregar';
+  cancelBtn.hidden = true;
   CargarProductos();
 });
 
@@ -129,8 +140,6 @@ async function buscarProductos() {
   CargarTabla(filtrado);
 }
 
-const btnSubir = document.getElementById('btnSubir');
-
 window.addEventListener('scroll', () => {
   btnSubir.style.display = window.scrollY > 300 ? 'flex' : 'none';
 });
@@ -141,7 +150,6 @@ btnSubir.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
-
 
 // Carga inicial
 window.addEventListener('DOMContentLoaded', CargarProductos);

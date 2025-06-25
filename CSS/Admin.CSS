@@ -1,61 +1,75 @@
- * {
-     font-family: "Montserrat", sans-serif;
- }
+*{
+    font-family: "Montserrat", sans-serif;
+}
 
- body {
-     background-color: #111311;
-     color: white;
-     padding: 20px;
- }
+body {
+    background-color: #111311;
+    color: white;
+    padding: 20px;
+
+}
 
 /* Formulario */
 .zapato-form {
     margin-bottom: 1.5rem;
-  }
+}
 
 .zapato-form .flex {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-  }
+}
   
-  .zapato-form .flex label {
+.zapato-form .flex label {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 200px;
-  }
+}
 
- /*Área Responsive*/
- .container {
-     max-width: 800px;
-     margin: 0 auto;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     text-align: center;
+/*Área Responsive*/
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
  }
 
- .top-bar {
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     align-items: center;
-     gap: 10px;
-     margin-bottom: 30px;
-     width: 100%;
- }
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    width: 100%;
+}
 
- .top-bar button{
+.top-bar button{
     height: auto;
- }
+}
 
- .table-container {
-     background-color: white;
-     border-radius: 5px;
-     overflow-x: auto;
-     width: 100%;
-     border: 3px solid #3D9DF3;
- }
+.table-container {
+    background-color: white;
+    border-radius: 5px;
+    overflow-x: auto;
+    width: 100%;
+    border: 3px solid #3D9DF3;
+}
+
+.btn-cancel{
+    height: auto;
+    width: 100%;
+}
+
+.search-box{
+    margin-top: 20px;
+}
+
+.btn-accions{
+    width: 90%;
+}
 
  @media (max-width: 600px) {
      .search-box {
